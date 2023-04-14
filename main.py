@@ -7,7 +7,7 @@ def get_starlink_probe_ids():
     response = requests.get(RIPE_API)
     json = response.json()
 
-    return list(map(lambda p: p["id"], json["results"]))
+    return [p["id"] for p in json["results"]]
 
 
 if __name__ == "__main__":
