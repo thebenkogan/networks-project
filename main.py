@@ -6,13 +6,12 @@ load_dotenv()
 
 API_KEY = os.environ["API_KEY"]
 RIPE_API = "https://atlas.ripe.net/api/v2/probes"
-STARLINK_PARAMS = {"status_name": "Connected", "tags": "starlink"}
+STARLINK_PARAMS = {"status_name": "Connected", "tags": "starlink", "asn": 14593}
 
 
 def get_starlink_probe_ids():
     response = requests.get(RIPE_API, params=STARLINK_PARAMS)
     json = response.json()
-
     return [p["id"] for p in json["results"]]
 
 

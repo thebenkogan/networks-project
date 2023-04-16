@@ -1,5 +1,5 @@
 {
-  "count": 32,
+  "count": 30,
   "next": null,
   "previous": null,
   "results": [
@@ -15,7 +15,7 @@
       "id": 19983,
       "is_anchor": false,
       "is_public": true,
-      "last_connected": 1681442793,
+      "last_connected": 1681682159,
       "prefix_v4": "206.83.112.0/21",
       "prefix_v6": "2406:2d40:4400::/38",
       "status": {
@@ -54,7 +54,7 @@
         { "name": "system: IPv6 Capable", "slug": "system-ipv6-capable" },
         { "name": "system: IPv4 RFC1918", "slug": "system-ipv4-rfc1918" }
       ],
-      "total_uptime": 112477402,
+      "total_uptime": 112716768,
       "type": "Probe"
     },
     {
@@ -69,7 +69,7 @@
       "id": 20544,
       "is_anchor": false,
       "is_public": true,
-      "last_connected": 1681442793,
+      "last_connected": 1681682159,
       "prefix_v4": "91.102.182.0/23",
       "prefix_v6": null,
       "status": {
@@ -98,7 +98,7 @@
         { "name": "Satellite", "slug": "satellite" },
         { "name": "system: IPv4 Stable 1d", "slug": "system-ipv4-stable-1d" }
       ],
-      "total_uptime": 217450082,
+      "total_uptime": 217689448,
       "type": "Probe"
     },
     {
@@ -113,7 +113,7 @@
       "id": 35681,
       "is_anchor": false,
       "is_public": true,
-      "last_connected": 1681442793,
+      "last_connected": 1681682159,
       "prefix_v4": "145.224.96.0/21",
       "prefix_v6": "2a0d:3344:1800::/38",
       "status": {
@@ -150,7 +150,7 @@
         { "name": "system: IPv4 Stable 30d", "slug": "system-ipv4-stable-30d" },
         { "name": "system: IPv6 Works", "slug": "system-ipv6-works" }
       ],
-      "total_uptime": 106057215,
+      "total_uptime": 106296581,
       "type": "Probe"
     },
     {
@@ -165,7 +165,7 @@
       "id": 50008,
       "is_anchor": false,
       "is_public": true,
-      "last_connected": 1681442793,
+      "last_connected": 1681682159,
       "prefix_v4": "145.224.72.0/21",
       "prefix_v6": "2a0d:3344:1400::/38",
       "status": {
@@ -196,52 +196,7 @@
         { "name": "system: IPv6 Stable 1d", "slug": "system-ipv6-stable-1d" },
         { "name": "system: IPv6 Capable", "slug": "system-ipv6-capable" }
       ],
-      "total_uptime": 145757563,
-      "type": "Probe"
-    },
-    {
-      "address_v4": "94.107.192.26",
-      "address_v6": null,
-      "asn_v4": 47377,
-      "asn_v6": null,
-      "country_code": "FR",
-      "description": "FR-RSU",
-      "first_connected": 1575649565,
-      "geometry": { "type": "Point", "coordinates": [5.0885, 45.0605] },
-      "id": 52537,
-      "is_anchor": false,
-      "is_public": true,
-      "last_connected": 1681442793,
-      "prefix_v4": "94.107.192.0/18",
-      "prefix_v6": null,
-      "status": {
-        "id": 1,
-        "name": "Connected",
-        "since": "2023-04-01T04:05:18Z"
-      },
-      "status_since": 1680321918,
-      "tags": [
-        { "name": "Starlink", "slug": "starlink" },
-        { "name": "Satellite", "slug": "satellite" },
-        { "name": "Office", "slug": "office" },
-        { "name": "NAT", "slug": "nat" },
-        { "name": "IPv4", "slug": "ipv4" },
-        { "name": "system: IPv4 Capable", "slug": "system-ipv4-capable" },
-        { "name": "system: IPv4 RFC1918", "slug": "system-ipv4-rfc1918" },
-        { "name": "system: V4", "slug": "system-v4" },
-        { "name": "Meraki", "slug": "meraki" },
-        {
-          "name": "system: Resolves A Correctly",
-          "slug": "system-resolves-a-correctly"
-        },
-        {
-          "name": "system: Resolves AAAA Correctly",
-          "slug": "system-resolves-aaaa-correctly"
-        },
-        { "name": "system: IPv4 Works", "slug": "system-ipv4-works" },
-        { "name": "system: IPv4 Stable 1d", "slug": "system-ipv4-stable-1d" }
-      ],
-      "total_uptime": 24132758,
+      "total_uptime": 145996929,
       "type": "Probe"
     },
     {
@@ -256,7 +211,7 @@
       "id": 52955,
       "is_anchor": false,
       "is_public": true,
-      "last_connected": 1681442793,
+      "last_connected": 1681682159,
       "prefix_v4": "206.83.96.0/21",
       "prefix_v6": null,
       "status": {
@@ -272,6 +227,7 @@
         { "name": "system: IPv4 Capable", "slug": "system-ipv4-capable" },
         { "name": "system: V4", "slug": "system-v4" },
         { "name": "Starlink", "slug": "starlink" },
+        { "name": "system: IPv4 Stable 1d", "slug": "system-ipv4-stable-1d" },
         { "name": "NAT", "slug": "nat" },
         { "name": "Satellite", "slug": "satellite" },
         { "name": "system: IPv4 Stable 30d", "slug": "system-ipv4-stable-30d" },
@@ -285,11 +241,11 @@
           "slug": "system-resolves-aaaa-correctly"
         }
       ],
-      "total_uptime": 98856390,
+      "total_uptime": 99095756,
       "type": "Probe"
     },
     {
-      "address_v4": "98.97.60.22",
+      "address_v4": "98.97.59.53",
       "address_v6": null,
       "asn_v4": 14593,
       "asn_v6": null,
@@ -300,15 +256,15 @@
       "id": 53798,
       "is_anchor": false,
       "is_public": true,
-      "last_connected": 1681442793,
+      "last_connected": 1681682159,
       "prefix_v4": "98.97.56.0/21",
       "prefix_v6": null,
       "status": {
         "id": 1,
         "name": "Connected",
-        "since": "2023-04-12T06:53:18Z"
+        "since": "2023-04-14T09:07:57Z"
       },
-      "status_since": 1681282398,
+      "status_since": 1681463277,
       "tags": [
         { "name": "system: IPv4 Capable", "slug": "system-ipv4-capable" },
         { "name": "system: IPv4 Works", "slug": "system-ipv4-works" },
@@ -321,16 +277,16 @@
           "name": "system: Resolves AAAA Correctly",
           "slug": "system-resolves-aaaa-correctly"
         },
-        { "name": "system: IPv4 Stable 1d", "slug": "system-ipv4-stable-1d" },
         { "name": "system: IPv4 RFC1918", "slug": "system-ipv4-rfc1918" },
+        { "name": "system: IPv4 Stable 1d", "slug": "system-ipv4-stable-1d" },
         { "name": "Starlink", "slug": "starlink" },
         { "name": "system: IPv4 Stable 30d", "slug": "system-ipv4-stable-30d" }
       ],
-      "total_uptime": 68320549,
+      "total_uptime": 68559432,
       "type": "Probe"
     },
     {
-      "address_v4": "98.97.81.178",
+      "address_v4": "98.97.83.71",
       "address_v6": null,
       "asn_v4": 14593,
       "asn_v6": null,
@@ -341,15 +297,15 @@
       "id": 54330,
       "is_anchor": false,
       "is_public": true,
-      "last_connected": 1681442793,
+      "last_connected": 1681682159,
       "prefix_v4": "98.97.80.0/21",
       "prefix_v6": null,
       "status": {
         "id": 1,
         "name": "Connected",
-        "since": "2023-04-09T16:01:57Z"
+        "since": "2023-04-14T05:52:45Z"
       },
-      "status_since": 1681056117,
+      "status_since": 1681451565,
       "tags": [
         { "name": "system: IPv4 Works", "slug": "system-ipv4-works" },
         { "name": "system: V4", "slug": "system-v4" },
@@ -368,7 +324,7 @@
         { "name": "Homelab", "slug": "homelab" },
         { "name": "Starlink", "slug": "starlink" }
       ],
-      "total_uptime": 80466382,
+      "total_uptime": 80705316,
       "type": "Probe"
     },
     {
@@ -383,7 +339,7 @@
       "id": 60323,
       "is_anchor": false,
       "is_public": true,
-      "last_connected": 1681442793,
+      "last_connected": 1681682159,
       "prefix_v4": "145.224.72.0/21",
       "prefix_v6": "2a0d:3344:1400::/38",
       "status": {
@@ -396,7 +352,6 @@
         { "name": "system: IPv4 Works", "slug": "system-ipv4-works" },
         { "name": "system: IPv4 Stable 30d", "slug": "system-ipv4-stable-30d" },
         { "name": "system: IPv4 Stable 1d", "slug": "system-ipv4-stable-1d" },
-        { "name": "system: IPv6 Stable 1d", "slug": "system-ipv6-stable-1d" },
         {
           "name": "system: Resolves A Correctly",
           "slug": "system-resolves-a-correctly"
@@ -420,7 +375,7 @@
         { "name": "system: V5", "slug": "system-v5" },
         { "name": "system: IPv4 Stable 90d", "slug": "system-ipv4-stable-90d" }
       ],
-      "total_uptime": 12819260,
+      "total_uptime": 13058626,
       "type": "Probe"
     },
     {
@@ -435,7 +390,7 @@
       "id": 60510,
       "is_anchor": false,
       "is_public": true,
-      "last_connected": 1681442793,
+      "last_connected": 1681682159,
       "prefix_v4": "129.222.184.0/21",
       "prefix_v6": null,
       "status": {
@@ -467,7 +422,7 @@
           "slug": "system-resolves-aaaa-correctly"
         }
       ],
-      "total_uptime": 7630525,
+      "total_uptime": 7869891,
       "type": "Probe"
     },
     {
@@ -482,15 +437,15 @@
       "id": 60929,
       "is_anchor": false,
       "is_public": true,
-      "last_connected": 1681442793,
+      "last_connected": 1681682159,
       "prefix_v4": "98.97.56.0/21",
       "prefix_v6": null,
       "status": {
         "id": 1,
         "name": "Connected",
-        "since": "2023-04-12T22:26:07Z"
+        "since": "2023-04-14T06:43:32Z"
       },
-      "status_since": 1681338367,
+      "status_since": 1681454612,
       "tags": [
         { "name": "system: IPv4 Stable 30d", "slug": "system-ipv4-stable-30d" },
         { "name": "wireless ISP", "slug": "wireless-isp" },
@@ -513,12 +468,12 @@
           "slug": "system-resolves-aaaa-correctly"
         }
       ],
-      "total_uptime": 9513150,
+      "total_uptime": 9752161,
       "type": "Probe"
     },
     {
-      "address_v4": "98.97.182.14",
-      "address_v6": "2605:59c8:61a3:4310:da58:d7ff:fe03:583",
+      "address_v4": "98.97.177.203",
+      "address_v6": "2605:59c8:6016:be10:da58:d7ff:fe03:583",
       "asn_v4": 14593,
       "asn_v6": 14593,
       "country_code": "US",
@@ -528,15 +483,15 @@
       "id": 61081,
       "is_anchor": false,
       "is_public": true,
-      "last_connected": 1681442793,
+      "last_connected": 1681682159,
       "prefix_v4": "98.97.176.0/21",
       "prefix_v6": "2605:59c8:6000::/38",
       "status": {
         "id": 1,
         "name": "Connected",
-        "since": "2023-04-12T05:07:09Z"
+        "since": "2023-04-14T13:59:36Z"
       },
-      "status_since": 1681276029,
+      "status_since": 1681480776,
       "tags": [
         { "name": "system: IPv4 RFC1918", "slug": "system-ipv4-rfc1918" },
         { "name": "system: IPv4 Works", "slug": "system-ipv4-works" },
@@ -556,14 +511,13 @@
         { "name": "system: IPv4 Stable 30d", "slug": "system-ipv4-stable-30d" },
         { "name": "system: IPv4 Stable 90d", "slug": "system-ipv4-stable-90d" },
         { "name": "system: IPv4 Stable 1d", "slug": "system-ipv4-stable-1d" },
-        { "name": "system: IPv6 Stable 1d", "slug": "system-ipv6-stable-1d" },
         { "name": "system: V5", "slug": "system-v5" }
       ],
-      "total_uptime": 11986015,
+      "total_uptime": 12224348,
       "type": "Probe"
     },
     {
-      "address_v4": "98.97.112.81",
+      "address_v4": "98.97.115.216",
       "address_v6": null,
       "asn_v4": 14593,
       "asn_v6": null,
@@ -574,15 +528,15 @@
       "id": 61113,
       "is_anchor": false,
       "is_public": true,
-      "last_connected": 1681442793,
+      "last_connected": 1681682159,
       "prefix_v4": "98.97.112.0/21",
       "prefix_v6": null,
       "status": {
         "id": 1,
         "name": "Connected",
-        "since": "2023-04-14T03:08:23Z"
+        "since": "2023-04-16T16:57:14Z"
       },
-      "status_since": 1681441703,
+      "status_since": 1681664234,
       "tags": [
         { "name": "system: IPv4 Works", "slug": "system-ipv4-works" },
         { "name": "system: IPv4 Capable", "slug": "system-ipv4-capable" },
@@ -606,11 +560,11 @@
         },
         { "name": "system: V5", "slug": "system-v5" }
       ],
-      "total_uptime": 6780900,
+      "total_uptime": 6998583,
       "type": "Probe"
     },
     {
-      "address_v4": "98.97.11.166",
+      "address_v4": "98.97.11.192",
       "address_v6": "fd1e:4126:679f:be7:da58:d7ff:fe03:236",
       "asn_v4": 14593,
       "asn_v6": null,
@@ -621,23 +575,23 @@
       "id": 61532,
       "is_anchor": false,
       "is_public": true,
-      "last_connected": 1681442793,
+      "last_connected": 1681682159,
       "prefix_v4": "98.97.8.0/21",
       "prefix_v6": null,
       "status": {
         "id": 1,
         "name": "Connected",
-        "since": "2023-04-08T00:50:29Z"
+        "since": "2023-04-14T05:49:00Z"
       },
-      "status_since": 1680915029,
+      "status_since": 1681451340,
       "tags": [
         { "name": "system: IPv4 Stable 30d", "slug": "system-ipv4-stable-30d" },
-        { "name": "system: IPv4 Stable 1d", "slug": "system-ipv4-stable-1d" },
         { "name": "system: IPv4 Capable", "slug": "system-ipv4-capable" },
         { "name": "system: IPv6 ULA", "slug": "system-ipv6-ula" },
         { "name": "system: IPv4 Works", "slug": "system-ipv4-works" },
         { "name": "system: IPv4 RFC1918", "slug": "system-ipv4-rfc1918" },
         { "name": "system: IPv6 Capable", "slug": "system-ipv6-capable" },
+        { "name": "system: IPv4 Stable 1d", "slug": "system-ipv4-stable-1d" },
         { "name": "Starlink", "slug": "starlink" },
         {
           "name": "system: Resolves A Correctly",
@@ -649,7 +603,7 @@
         },
         { "name": "system: V5", "slug": "system-v5" }
       ],
-      "total_uptime": 7388979,
+      "total_uptime": 7627826,
       "type": "Probe"
     },
     {
@@ -664,15 +618,15 @@
       "id": 61780,
       "is_anchor": false,
       "is_public": true,
-      "last_connected": 1681442793,
+      "last_connected": 1681682159,
       "prefix_v4": "129.222.216.0/21",
       "prefix_v6": null,
       "status": {
         "id": 1,
         "name": "Connected",
-        "since": "2023-04-12T04:58:58Z"
+        "since": "2023-04-14T14:11:47Z"
       },
-      "status_since": 1681275538,
+      "status_since": 1681481507,
       "tags": [
         { "name": "system: IPv4 Works", "slug": "system-ipv4-works" },
         { "name": "system: IPv4 Stable 30d", "slug": "system-ipv4-stable-30d" },
@@ -691,12 +645,12 @@
           "slug": "system-resolves-aaaa-correctly"
         }
       ],
-      "total_uptime": 10925463,
+      "total_uptime": 11164822,
       "type": "Probe"
     },
     {
       "address_v4": "145.224.66.76",
-      "address_v6": "2a0d:3344:118:4200:da58:d7ff:fe03:a5d",
+      "address_v6": "2a0d:3344:163:7500:da58:d7ff:fe03:a5d",
       "asn_v4": 14593,
       "asn_v6": 14593,
       "country_code": "GB",
@@ -706,21 +660,16 @@
       "id": 61878,
       "is_anchor": false,
       "is_public": true,
-      "last_connected": 1681442793,
+      "last_connected": 1681682159,
       "prefix_v4": "145.224.64.0/21",
       "prefix_v6": "2a0d:3344::/38",
       "status": {
         "id": 1,
         "name": "Connected",
-        "since": "2023-04-12T03:19:25Z"
+        "since": "2023-04-14T18:20:48Z"
       },
-      "status_since": 1681269565,
+      "status_since": 1681496448,
       "tags": [
-        { "name": "system: IPv4 Stable 1d", "slug": "system-ipv4-stable-1d" },
-        {
-          "name": "system: IPv6 Doesn't Work",
-          "slug": "system-ipv6-doesnt-work"
-        },
         { "name": "system: IPv4 Capable", "slug": "system-ipv4-capable" },
         { "name": "system: IPv4 RFC1918", "slug": "system-ipv4-rfc1918" },
         { "name": "Starlink", "slug": "starlink" },
@@ -735,10 +684,13 @@
           "name": "system: Resolves AAAA Correctly",
           "slug": "system-resolves-aaaa-correctly"
         },
+        { "name": "system: IPv6 Works", "slug": "system-ipv6-works" },
         { "name": "system: IPv6 Capable", "slug": "system-ipv6-capable" },
+        { "name": "system: IPv6 Stable 1d", "slug": "system-ipv6-stable-1d" },
+        { "name": "system: IPv4 Stable 1d", "slug": "system-ipv4-stable-1d" },
         { "name": "system: V5", "slug": "system-v5" }
       ],
-      "total_uptime": 1148400,
+      "total_uptime": 1380153,
       "type": "Probe"
     },
     {
@@ -753,7 +705,7 @@
       "id": 62083,
       "is_anchor": false,
       "is_public": true,
-      "last_connected": 1681442793,
+      "last_connected": 1681682159,
       "prefix_v4": "98.97.112.0/21",
       "prefix_v6": "2605:59c8::/38",
       "status": {
@@ -788,11 +740,11 @@
           "slug": "system-resolves-aaaa-correctly"
         }
       ],
-      "total_uptime": 5202077,
+      "total_uptime": 5441443,
       "type": "Probe"
     },
     {
-      "address_v4": "98.97.9.92",
+      "address_v4": "98.97.9.170",
       "address_v6": "2605:59c8:1194:b400:da58:d7ff:fe03:99a",
       "asn_v4": 14593,
       "asn_v6": 14593,
@@ -803,15 +755,15 @@
       "id": 62417,
       "is_anchor": false,
       "is_public": true,
-      "last_connected": 1681442793,
+      "last_connected": 1681682159,
       "prefix_v4": "98.97.8.0/21",
       "prefix_v6": "2605:59c8:1000::/38",
       "status": {
         "id": 1,
         "name": "Connected",
-        "since": "2023-04-08T17:02:49Z"
+        "since": "2023-04-14T05:45:58Z"
       },
-      "status_since": 1680973369,
+      "status_since": 1681451158,
       "tags": [
         { "name": "system: IPv4 Stable 30d", "slug": "system-ipv4-stable-30d" },
         { "name": "system: IPv4 Works", "slug": "system-ipv4-works" },
@@ -833,7 +785,7 @@
         { "name": "system: IPv4 Stable 90d", "slug": "system-ipv4-stable-90d" },
         { "name": "system: V5", "slug": "system-v5" }
       ],
-      "total_uptime": 10246359,
+      "total_uptime": 10485639,
       "type": "Probe"
     },
     {
@@ -848,7 +800,7 @@
       "id": 62498,
       "is_anchor": false,
       "is_public": true,
-      "last_connected": 1681442793,
+      "last_connected": 1681682159,
       "prefix_v4": "98.97.112.0/21",
       "prefix_v6": null,
       "status": {
@@ -873,14 +825,13 @@
           "name": "system: Resolves AAAA Correctly",
           "slug": "system-resolves-aaaa-correctly"
         },
-        { "name": "system: IPv4 Stable 1d", "slug": "system-ipv4-stable-1d" },
         { "name": "system: V5", "slug": "system-v5" }
       ],
-      "total_uptime": 10255945,
+      "total_uptime": 10495311,
       "type": "Probe"
     },
     {
-      "address_v4": "98.97.178.66",
+      "address_v4": "98.97.178.219",
       "address_v6": "2605:59c8:61d0:7810:da58:d7ff:fe03:4b5",
       "asn_v4": 14593,
       "asn_v6": 14593,
@@ -891,19 +842,18 @@
       "id": 62553,
       "is_anchor": false,
       "is_public": true,
-      "last_connected": 1681442793,
+      "last_connected": 1681682159,
       "prefix_v4": "98.97.176.0/21",
       "prefix_v6": "2605:59c8:6000::/38",
       "status": {
         "id": 1,
         "name": "Connected",
-        "since": "2023-04-09T10:20:36Z"
+        "since": "2023-04-14T04:46:29Z"
       },
-      "status_since": 1681035636,
+      "status_since": 1681447589,
       "tags": [
         { "name": "system: IPv4 Works", "slug": "system-ipv4-works" },
         { "name": "system: IPv6 Capable", "slug": "system-ipv6-capable" },
-        { "name": "system: IPv4 Stable 1d", "slug": "system-ipv4-stable-1d" },
         {
           "name": "system: Resolves A Correctly",
           "slug": "system-resolves-a-correctly"
@@ -915,67 +865,19 @@
         { "name": "Starlink", "slug": "starlink" },
         { "name": "Satellite", "slug": "satellite" },
         { "name": "Home", "slug": "home" },
-        { "name": "system: IPv6 Stable 1d", "slug": "system-ipv6-stable-1d" },
         { "name": "system: IPv6 Works", "slug": "system-ipv6-works" },
         { "name": "system: IPv4 Stable 30d", "slug": "system-ipv4-stable-30d" },
         { "name": "system: IPv4 Capable", "slug": "system-ipv4-capable" },
         { "name": "system: IPv4 RFC1918", "slug": "system-ipv4-rfc1918" },
-        { "name": "system: V5", "slug": "system-v5" }
-      ],
-      "total_uptime": 10257528,
-      "type": "Probe"
-    },
-    {
-      "address_v4": "45.13.104.43",
-      "address_v6": "2a0c:b641:a0:c002:da58:d7ff:fe03:9f5",
-      "asn_v4": 2027,
-      "asn_v6": 212299,
-      "country_code": "FR",
-      "description": "Atlas devben network",
-      "first_connected": 1668516201,
-      "geometry": { "type": "Point", "coordinates": [-3.5785, 47.8195] },
-      "id": 62585,
-      "is_anchor": false,
-      "is_public": true,
-      "last_connected": 1681442793,
-      "prefix_v4": "45.13.104.0/22",
-      "prefix_v6": "2a0c:b641:a0::/44",
-      "status": {
-        "id": 1,
-        "name": "Connected",
-        "since": "2023-04-07T06:43:09Z"
-      },
-      "status_since": 1680849789,
-      "tags": [
-        { "name": "system: IPv4 Capable", "slug": "system-ipv4-capable" },
-        {
-          "name": "system: Resolves A Correctly",
-          "slug": "system-resolves-a-correctly"
-        },
-        { "name": "system: IPv4 Works", "slug": "system-ipv4-works" },
-        { "name": "system: IPv6 Works", "slug": "system-ipv6-works" },
         { "name": "system: IPv4 Stable 1d", "slug": "system-ipv4-stable-1d" },
-        { "name": "system: IPv6 Capable", "slug": "system-ipv6-capable" },
-        {
-          "name": "system: Resolves AAAA Correctly",
-          "slug": "system-resolves-aaaa-correctly"
-        },
-        { "name": "system: IPv4 RFC1918", "slug": "system-ipv4-rfc1918" },
-        { "name": "DSL", "slug": "dsl" },
-        { "name": "Orange", "slug": "orange" },
-        { "name": "OMR router", "slug": "omr-router" },
-        { "name": "NAT", "slug": "nat" },
-        { "name": "Starlink", "slug": "starlink" },
-        { "name": "Homelab", "slug": "homelab" },
-        { "name": "IPv4", "slug": "ipv4" },
-        { "name": "IPv6", "slug": "ipv6" },
-        { "name": "system: V5", "slug": "system-v5" }
+        { "name": "system: V5", "slug": "system-v5" },
+        { "name": "system: IPv6 Stable 1d", "slug": "system-ipv6-stable-1d" }
       ],
-      "total_uptime": 11546874,
+      "total_uptime": 10496568,
       "type": "Probe"
     },
     {
-      "address_v4": "216.147.123.241",
+      "address_v4": "216.147.121.119",
       "address_v6": null,
       "asn_v4": 14593,
       "asn_v6": null,
@@ -986,15 +888,15 @@
       "id": 62613,
       "is_anchor": false,
       "is_public": true,
-      "last_connected": 1681442793,
+      "last_connected": 1681682159,
       "prefix_v4": "216.147.120.0/21",
       "prefix_v6": null,
       "status": {
         "id": 1,
         "name": "Connected",
-        "since": "2023-04-08T00:54:28Z"
+        "since": "2023-04-14T07:02:31Z"
       },
-      "status_since": 1680915268,
+      "status_since": 1681455751,
       "tags": [
         { "name": "system: IPv4 Capable", "slug": "system-ipv4-capable" },
         { "name": "system: IPv4 RFC1918", "slug": "system-ipv4-rfc1918" },
@@ -1014,7 +916,7 @@
           "slug": "system-resolves-aaaa-correctly"
         }
       ],
-      "total_uptime": 3431896,
+      "total_uptime": 3670632,
       "type": "Probe"
     },
     {
@@ -1029,18 +931,17 @@
       "id": 62843,
       "is_anchor": false,
       "is_public": true,
-      "last_connected": 1681442793,
+      "last_connected": 1681682159,
       "prefix_v4": "145.224.88.0/22",
       "prefix_v6": "2a01:e00::/26",
       "status": {
         "id": 1,
         "name": "Connected",
-        "since": "2023-04-13T03:49:28Z"
+        "since": "2023-04-16T14:02:02Z"
       },
-      "status_since": 1681357768,
+      "status_since": 1681653722,
       "tags": [
         { "name": "system: IPv4 Works", "slug": "system-ipv4-works" },
-        { "name": "system: IPv4 Stable 1d", "slug": "system-ipv4-stable-1d" },
         {
           "name": "system: IPv6 Doesn't Work",
           "slug": "system-ipv6-doesnt-work"
@@ -1061,7 +962,7 @@
           "slug": "system-resolves-a-correctly"
         }
       ],
-      "total_uptime": 12720889,
+      "total_uptime": 12959741,
       "type": "Probe"
     },
     {
@@ -1076,15 +977,15 @@
       "id": 62868,
       "is_anchor": false,
       "is_public": true,
-      "last_connected": 1681442793,
+      "last_connected": 1681682159,
       "prefix_v4": "98.97.112.0/21",
       "prefix_v6": null,
       "status": {
         "id": 1,
         "name": "Connected",
-        "since": "2023-04-12T07:04:30Z"
+        "since": "2023-04-14T13:59:51Z"
       },
-      "status_since": 1681283070,
+      "status_since": 1681480791,
       "tags": [
         { "name": "system: IPv4 Stable 30d", "slug": "system-ipv4-stable-30d" },
         { "name": "system: IPv4 Works", "slug": "system-ipv4-works" },
@@ -1109,7 +1010,7 @@
           "slug": "system-resolves-aaaa-correctly"
         }
       ],
-      "total_uptime": 10877502,
+      "total_uptime": 11116862,
       "type": "Probe"
     },
     {
@@ -1124,7 +1025,7 @@
       "id": 62956,
       "is_anchor": false,
       "is_public": true,
-      "last_connected": 1681442793,
+      "last_connected": 1681682159,
       "prefix_v4": null,
       "prefix_v6": "2605:59c8:1400::/38",
       "status": {
@@ -1157,7 +1058,7 @@
         { "name": "dual-stack", "slug": "dual-stack" },
         { "name": "system: V5", "slug": "system-v5" }
       ],
-      "total_uptime": 7683786,
+      "total_uptime": 7923152,
       "type": "Probe"
     },
     {
@@ -1172,7 +1073,7 @@
       "id": 63017,
       "is_anchor": false,
       "is_public": true,
-      "last_connected": 1681442793,
+      "last_connected": 1681682159,
       "prefix_v4": "129.222.216.0/21",
       "prefix_v6": null,
       "status": {
@@ -1194,10 +1095,9 @@
           "name": "system: Resolves AAAA Correctly",
           "slug": "system-resolves-aaaa-correctly"
         },
-        { "name": "system: IPv4 Stable 1d", "slug": "system-ipv4-stable-1d" },
         { "name": "system: V5", "slug": "system-v5" }
       ],
-      "total_uptime": 469657,
+      "total_uptime": 709023,
       "type": "Probe"
     },
     {
@@ -1212,7 +1112,7 @@
       "id": 1002289,
       "is_anchor": false,
       "is_public": true,
-      "last_connected": 1681442793,
+      "last_connected": 1681682159,
       "prefix_v4": "145.224.72.0/21",
       "prefix_v6": null,
       "status": {
@@ -1245,10 +1145,10 @@
         },
         { "name": "system: IPv6 Stable 30d", "slug": "system-ipv6-stable-30d" },
         { "name": "system: IPv4 Stable 30d", "slug": "system-ipv4-stable-30d" },
-        { "name": "system: IPv4 Stable 1d", "slug": "system-ipv4-stable-1d" },
-        { "name": "system: IPv6 Stable 1d", "slug": "system-ipv6-stable-1d" }
+        { "name": "system: IPv6 Stable 1d", "slug": "system-ipv6-stable-1d" },
+        { "name": "system: IPv4 Stable 1d", "slug": "system-ipv4-stable-1d" }
       ],
-      "total_uptime": 60169827,
+      "total_uptime": 60409193,
       "type": "Probe"
     },
     {
@@ -1263,7 +1163,7 @@
       "id": 1002750,
       "is_anchor": false,
       "is_public": true,
-      "last_connected": 1681442793,
+      "last_connected": 1681682159,
       "prefix_v4": "145.224.72.0/21",
       "prefix_v6": null,
       "status": {
@@ -1290,12 +1190,12 @@
         { "name": "Raspberry Pi", "slug": "raspberry-pi" },
         { "name": "system: IPv4 Stable 1d", "slug": "system-ipv4-stable-1d" }
       ],
-      "total_uptime": 47138455,
+      "total_uptime": 47377821,
       "type": "Probe"
     },
     {
       "address_v4": "98.97.19.77",
-      "address_v6": "2605:59c8:205d:6200:211:32ff:fef0:4d23",
+      "address_v6": "2605:59c8:253b:7c00:211:32ff:fef0:4d23",
       "asn_v4": 14593,
       "asn_v6": 14593,
       "country_code": "US",
@@ -1305,9 +1205,9 @@
       "id": 1004232,
       "is_anchor": false,
       "is_public": true,
-      "last_connected": 1681442793,
+      "last_connected": 1681682159,
       "prefix_v4": "98.97.16.0/21",
-      "prefix_v6": "2605:59c8:2000::/38",
+      "prefix_v6": "2605:59c8:2400::/38",
       "status": {
         "id": 1,
         "name": "Connected",
@@ -1336,14 +1236,14 @@
           "slug": "system-resolves-aaaa-correctly"
         }
       ],
-      "total_uptime": 27059161,
+      "total_uptime": 27298527,
       "type": "Probe"
     },
     {
       "address_v4": "209.198.137.157",
-      "address_v6": "2a0d:3344:1b6a:4801:0:242:ac11:2",
+      "address_v6": "fd17::242:ac11:4",
       "asn_v4": 14593,
-      "asn_v6": 14593,
+      "asn_v6": null,
       "country_code": "IT",
       "description": "Starlink (circular dishy)",
       "first_connected": 1666182445,
@@ -1351,15 +1251,15 @@
       "id": 1004876,
       "is_anchor": false,
       "is_public": true,
-      "last_connected": 1681442793,
+      "last_connected": 1681682159,
       "prefix_v4": "209.198.136.0/23",
-      "prefix_v6": "2a0d:3344:1800::/38",
+      "prefix_v6": null,
       "status": {
         "id": 1,
         "name": "Connected",
-        "since": "2023-04-12T03:08:17Z"
+        "since": "2023-04-16T16:03:00Z"
       },
-      "status_since": 1681268897,
+      "status_since": 1681660980,
       "tags": [
         { "name": "system: IPv6 Works", "slug": "system-ipv6-works" },
         { "name": "system: IPv4 Capable", "slug": "system-ipv4-capable" },
@@ -1384,16 +1284,17 @@
         { "name": "system: IPv4 Stable 30d", "slug": "system-ipv4-stable-30d" },
         { "name": "Homelab", "slug": "homelab" },
         { "name": "system: IPv4 Stable 1d", "slug": "system-ipv4-stable-1d" },
+        { "name": "system: IPv6 ULA", "slug": "system-ipv6-ula" },
         { "name": "Docker", "slug": "docker" },
         { "name": "Home", "slug": "home" }
       ],
-      "total_uptime": 14738953,
+      "total_uptime": 14972206,
       "type": "Probe"
     },
     {
-      "address_v4": "151.82.181.29",
-      "address_v6": "2a0d:3344:1b65:9410:1ce8:a1ff:fe8c:719c",
-      "asn_v4": 1267,
+      "address_v4": "145.224.103.153",
+      "address_v6": "2a0d:3344:1b5c:2010:1ce8:a1ff:fe8c:719c",
+      "asn_v4": 14593,
       "asn_v6": 14593,
       "country_code": "IT",
       "description": "Starlink Residential (rectangular dish)",
@@ -1402,15 +1303,15 @@
       "id": 1004978,
       "is_anchor": false,
       "is_public": true,
-      "last_connected": 1681442793,
-      "prefix_v4": "151.82.0.0/16",
+      "last_connected": 1681682159,
+      "prefix_v4": "145.224.96.0/21",
       "prefix_v6": "2a0d:3344:1800::/38",
       "status": {
         "id": 1,
         "name": "Connected",
-        "since": "2023-04-14T01:40:11Z"
+        "since": "2023-04-16T05:28:29Z"
       },
-      "status_since": 1681436411,
+      "status_since": 1681622909,
       "tags": [
         { "name": "system: IPv4 Works", "slug": "system-ipv4-works" },
         {
@@ -1436,7 +1337,7 @@
         { "name": "Homelab", "slug": "homelab" },
         { "name": "IPv4", "slug": "ipv4" }
       ],
-      "total_uptime": 12332424,
+      "total_uptime": 12566177,
       "type": "Probe"
     },
     {
@@ -1451,15 +1352,15 @@
       "id": 1005627,
       "is_anchor": false,
       "is_public": true,
-      "last_connected": 1681442793,
+      "last_connected": 1681682159,
       "prefix_v4": "129.222.248.0/21",
       "prefix_v6": null,
       "status": {
         "id": 1,
         "name": "Connected",
-        "since": "2023-04-14T02:41:32Z"
+        "since": "2023-04-16T08:26:58Z"
       },
-      "status_since": 1681440092,
+      "status_since": 1681633618,
       "tags": [
         { "name": "Starlink", "slug": "starlink" },
         { "name": "system: IPv4 Capable", "slug": "system-ipv4-capable" },
@@ -1471,15 +1372,16 @@
         { "name": "CHR", "slug": "chr" },
         { "name": "system: IPv4 Works", "slug": "system-ipv4-works" },
         {
-          "name": "system: Doesn't Resolve A",
-          "slug": "system-doesnt-resolve-a"
-        },
-        {
           "name": "system: Doesn't Resolve AAAA",
           "slug": "system-doesnt-resolve-aaaa"
-        }
+        },
+        {
+          "name": "system: Resolves A Correctly",
+          "slug": "system-resolves-a-correctly"
+        },
+        { "name": "system: IPv4 Stable 1d", "slug": "system-ipv4-stable-1d" }
       ],
-      "total_uptime": 432275,
+      "total_uptime": 671465,
       "type": "Probe"
     }
   ]
