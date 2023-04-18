@@ -1,6 +1,6 @@
 import requests
 import os
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -25,7 +25,7 @@ def spawn_pings(probe_ids, target):
                 "description": f"{target} pings",
                 "type": "ping",
                 "af": 4,
-                "stop_time": str(datetime.now() + timedelta(days=1)),
+                "stop_time": str(datetime.now(timezone.utc) + timedelta(days=1)),
                 "interval": 15 * 60,
             }
         ],
@@ -46,5 +46,5 @@ def spawn_pings(probe_ids, target):
 
 if __name__ == "__main__":
     probe_ids = get_starlink_probe_ids()
-    print(spawn_pings(probe_ids, "reddit.com"))
+    print(spawn_pings(probe_ids, "google.com"))
     print(probe_ids)
