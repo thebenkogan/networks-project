@@ -7,7 +7,7 @@ load_dotenv()
 
 API_KEY = os.environ["API_KEY"]
 RIPE_API = "https://atlas.ripe.net/api/v2/probes"
-MEASUREMENT_API = url = "https://atlas.ripe.net/api/v2/measurements/"
+MEASUREMENT_API = "https://atlas.ripe.net/api/v2/measurements/"
 STARLINK_PARAMS = {"status_name": "Connected", "tags": "starlink", "asn": 14593}
 
 
