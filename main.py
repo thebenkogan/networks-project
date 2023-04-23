@@ -1,13 +1,20 @@
 import requests
 import os
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timedelta
 from dotenv import load_dotenv
+from ripe.atlas.cousteau import (
+    Ping,
+    AtlasSource,
+    AtlasCreateRequest,
+    AtlasResultsRequest,
+)
+from ripe.atlas.sagan import PingResult
+from collections import defaultdict
 
 load_dotenv()
 
 API_KEY = os.environ["API_KEY"]
 RIPE_API = "https://atlas.ripe.net/api/v2/probes"
-MEASUREMENT_API = "https://atlas.ripe.net/api/v2/measurements/"
 STARLINK_PARAMS = {"status_name": "Connected", "tags": "starlink", "asn": 14593}
 
 
@@ -18,33 +25,50 @@ def get_starlink_probe_ids():
 
 
 def spawn_pings(probe_ids, target):
-    spawn_data = {
-        "definitions": [
-            {
-                "target": target,
-                "description": f"{target} pings",
-                "type": "ping",
-                "af": 4,
-                "stop_time": str(datetime.now(timezone.utc) + timedelta(days=1)),
-                "interval": 15 * 60,
-            }
-        ],
-        "probes": [
-            {
-                "requested": min(25, len(probe_ids)),
-                "type": "probes",
-                "value": ",".join([str(i) for i in probe_ids[:25]]),
-            }
-        ],
+    ping = Ping(
+        af=4,
+        target=target,
+        description=f"{target} pings",
+        interval=15 * 60,
+    )
+
+    source = AtlasSource(
+        type="probes",
+        requested=min(25, len(probe_ids)),
+        value=",".join([str(i) for i in probe_ids[:25]]),
+    )
+
+    atlas_request = AtlasCreateRequest(
+        start_time=datetime.utcnow(),
+        stop_time=datetime.utcnow() + timedelta(days=1),
+        key=API_KEY,
+        measurements=[ping],
+        sources=[source],
+        is_oneoff=False,
+    )
+
+    return atlas_request.create()
+
+
+# Returns a dictionary of probe id -> list of (timestamp, RTT) tuples
+def fetch_ping_results(msm_id):
+    fetch_args = {
+        "msm_id": msm_id,
     }
-    headers = {
-        "Authorization": f"Key {API_KEY}",
-    }
-    response = requests.post(MEASUREMENT_API, json=spawn_data, headers=headers)
-    return response.json()
+
+    _, results = AtlasResultsRequest(**fetch_args).create()
+    results = [PingResult(res) for res in results]
+
+    probe_rtts_over_time = defaultdict(list)
+
+    for res in results:
+        probe_rtts_over_time[res.probe_id].append((res.created, res.rtt_average))
+
+    return probe_rtts_over_time
 
 
 if __name__ == "__main__":
-    probe_ids = get_starlink_probe_ids()
-    print(spawn_pings(probe_ids, "google.com"))
-    print(probe_ids)
+    # probe_ids = get_starlink_probe_ids()
+    # print(probe_ids)
+    # print(spawn_pings(probe_ids, "www.google.com"))
+    print(fetch_ping_results(26445013))
