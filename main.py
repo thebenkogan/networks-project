@@ -1,5 +1,8 @@
 import requests
 import os
+import matplotlib.pyplot as plt
+from matplotlib.dates import HourLocator, DateFormatter
+
 from datetime import datetime, timedelta
 from dotenv import load_dotenv
 from ripe.atlas.cousteau import (
@@ -66,9 +69,35 @@ def fetch_ping_results(msm_id):
 
     return probe_rtts_over_time
 
+def create_plots(probe_data):
+    # plot the graph for each key in the dictionary
+    for key in probe_data.keys():
+        # get datetime objects and rtt values from the list of tuples
+        x = [t[0] for t in probe_data[key]]
+        y = [t[1] for t in probe_data[key]]
+        
+        # plot the graph
+        plt.plot(x, y, marker='o', label=key)
+
+    # set labels and legend
+    plt.xlabel('UTC Time')
+    plt.ylabel('RTT')
+    plt.title('Probe ID RTT Over Time')
+
+    plt.legend()
+
+    # set the xticks to only show every other label
+    ax = plt.gca()
+    xticks = ax.get_xticks()
+    ax.xaxis.set_major_formatter(DateFormatter('%H:%M:%S'))
+    ax.set_xticks(xticks[::3])
+
+    # show the plot
+    plt.show()
 
 if __name__ == "__main__":
     # probe_ids = get_starlink_probe_ids()
     # print(probe_ids)
     # print(spawn_pings(probe_ids, "www.google.com"))
-    print(fetch_ping_results(26445013))
+    res = fetch_ping_results(26445013)
+    create_plots(res)
