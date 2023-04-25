@@ -1,7 +1,8 @@
 import requests
 import os
 import matplotlib.pyplot as plt
-from matplotlib.dates import HourLocator, DateFormatter
+import math
+from matplotlib.dates import DateFormatter
 
 from datetime import datetime, timedelta
 from dotenv import load_dotenv
@@ -19,6 +20,12 @@ load_dotenv()
 API_KEY = os.environ["API_KEY"]
 RIPE_API = "https://atlas.ripe.net/api/v2/probes"
 STARLINK_PARAMS = {"status_name": "Connected", "tags": "starlink", "asn": 14593}
+LOCATIONS = {
+    "USA1 (East Coast)" : [60510, 63017, 61780, 62417, 62553, 61081], 
+    "USA2 (Midwest and West Coast)" : [54330, 62613, 53798, 60929, 62498, 62868, 62083, 61113],
+    "EUROPE" : [61878, 62843, 60323, 1002289, 35681, 20544, 50008],
+    "OCEANIA" : [19983, 52955]
+}
 
 
 def get_starlink_probe_ids():
@@ -70,29 +77,27 @@ def fetch_ping_results(msm_id):
     return probe_rtts_over_time
 
 def create_plots(probe_data):
-    fig, axs = plt.subplots(4, 6, figsize=(10,10))
-    i = 0
-    j = 0
     # plot the graph for each key in the dictionary
-    for key in probe_data.keys():
-        # get datetime objects and rtt values from the list of tuples
-        x = [t[0] for t in probe_data[key]]
-        y = [t[1] for t in probe_data[key]]
-        
-        # plot the graph
-        axs[i, j].plot(x, y, marker='o', label=key)
+    for location, probe_ids in LOCATIONS.items():
+        r, c = (math.ceil(len(probe_ids)/2), 2)
+        fig, axs = plt.subplots(r, c, constrained_layout=True)
+        axs = axs.flatten()
+        fig.suptitle(location)
+        for i, p in enumerate(probe_ids):
+            # get datetime objects and rtt values from the list of tuples
+            x = [t[0] for t in probe_data[p]]
+            y = [t[1] for t in probe_data[p]]
+            
+            # plot the graph
+            axs[i].plot(x, y, marker='o', label=p)
 
-        # set labels and legend
-        axs[i, j].set_xlabel('UTC Time')
-        axs[i, j].set_ylabel('RTT')
-        axs[i, j].set_title('{} Probe ID RTT Over Time'.format(key))
-        xticks = axs[i, j].get_xticks()
-        axs[i, j].xaxis.set_major_formatter(DateFormatter('%H:%M:%S'))
-        axs[i, j].set_xticks(xticks[::3])
-        j = (j+1)%6
-        if j == 0:
-            i += 1
-    fig.tight_layout()
+            # set labels and legend
+            axs[i].set_xlabel('UTC Time')
+            axs[i].set_ylabel('RTT')
+            axs[i].set_title('{}'.format(p))
+            xticks = axs[i].get_xticks()
+            axs[i].xaxis.set_major_formatter(DateFormatter('%H:%M:%S'))
+            axs[i].set_xticks(xticks[::3])
     # show the plot
     plt.show()
 
