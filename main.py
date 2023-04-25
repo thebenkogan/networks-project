@@ -70,6 +70,9 @@ def fetch_ping_results(msm_id):
     return probe_rtts_over_time
 
 def create_plots(probe_data):
+    fig, axs = plt.subplots(4, 6, figsize=(10,10))
+    i = 0
+    j = 0
     # plot the graph for each key in the dictionary
     for key in probe_data.keys():
         # get datetime objects and rtt values from the list of tuples
@@ -77,21 +80,19 @@ def create_plots(probe_data):
         y = [t[1] for t in probe_data[key]]
         
         # plot the graph
-        plt.plot(x, y, marker='o', label=key)
+        axs[i, j].plot(x, y, marker='o', label=key)
 
-    # set labels and legend
-    plt.xlabel('UTC Time')
-    plt.ylabel('RTT')
-    plt.title('Probe ID RTT Over Time')
-
-    plt.legend()
-
-    # set the xticks to only show every other label
-    ax = plt.gca()
-    xticks = ax.get_xticks()
-    ax.xaxis.set_major_formatter(DateFormatter('%H:%M:%S'))
-    ax.set_xticks(xticks[::3])
-
+        # set labels and legend
+        axs[i, j].set_xlabel('UTC Time')
+        axs[i, j].set_ylabel('RTT')
+        axs[i, j].set_title('{} Probe ID RTT Over Time'.format(key))
+        xticks = axs[i, j].get_xticks()
+        axs[i, j].xaxis.set_major_formatter(DateFormatter('%H:%M:%S'))
+        axs[i, j].set_xticks(xticks[::3])
+        j = (j+1)%6
+        if j == 0:
+            i += 1
+    fig.tight_layout()
     # show the plot
     plt.show()
 
@@ -99,5 +100,5 @@ if __name__ == "__main__":
     # probe_ids = get_starlink_probe_ids()
     # print(probe_ids)
     # print(spawn_pings(probe_ids, "www.google.com"))
-    res = fetch_ping_results(26445013)
+    res = fetch_ping_results(52575576)
     create_plots(res)
