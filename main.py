@@ -86,7 +86,7 @@ def fetch_ping_results(msm_id):
     return probe_rtts_over_time
 
 
-def create_plots(probe_data):
+def create_separate_plots(probe_data):
     # plot the graph for each key in the dictionary
     for location, probe_ids in LOCATIONS.items():
         r, c = (math.ceil(len(probe_ids) / 2), 2)
@@ -111,9 +111,34 @@ def create_plots(probe_data):
     plt.show()
 
 
+def create_combined_plots(probe_data):
+    # plot the graph for each key in the dictionary
+    for i, (location, probe_ids) in enumerate(LOCATIONS.items()):
+        plt.figure(i + 1)
+        plt.title(location)
+        for i, p in enumerate(probe_ids):
+            # get datetime objects and rtt values from the list of tuples
+            x = [t[0] for t in probe_data[p]]
+            y = [t[1] for t in probe_data[p]]
+
+            # plot the graph
+            plt.plot(x, y, marker="o", label=p)
+
+            # set labels and legend
+            plt.xlabel("UTC Time")
+            plt.ylabel("RTT")
+
+            ax = plt.gca()
+            ax.xaxis.set_major_formatter(DateFormatter("%H:%M:%S"))
+            ax.xaxis.set_major_locator(HourLocator(interval=4))
+            plt.legend()
+    # show the plot
+    plt.show()
+
+
 if __name__ == "__main__":
     # probe_ids = get_starlink_probe_ids()
     # print(probe_ids)
     # print(spawn_pings(probe_ids, "www.google.com"))
     res = fetch_ping_results(52575576)
-    create_plots(res)
+    create_combined_plots(res)
