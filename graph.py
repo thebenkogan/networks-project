@@ -21,7 +21,7 @@ LOCATIONS = {
 
 def create_separate_plots(probe_data, show=False, save=True):
     # plot the graph for each key in the dictionary
-    for i, (location, probe_ids) in enumerate(LOCATIONS.items()):
+    for location, probe_ids in LOCATIONS.items():
         r, c = (math.ceil(len(probe_ids) / 2), 2)
         fig, axs = plt.subplots(r, c, figsize=(10, 10), constrained_layout=True)
         axs = axs.flatten()
