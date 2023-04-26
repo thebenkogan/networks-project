@@ -76,7 +76,7 @@ if __name__ == "__main__":
     # print(spawn_pings(probe_ids, "www.google.com"))
     res = fetch_ping_results(52575576)
     # create_separate_plots(res, False)
-    if len(sys.argv) > 0 and sys.argv[0] == "separate":
+    if len(sys.argv) > 0 and sys.argv[1] == "separate":
         create_separate_plots(probe_data=res, show=False, save=True)
     else:
         create_combined_plots(probe_data=res, show=False, save=True)
