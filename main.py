@@ -1,7 +1,8 @@
 import requests
 import os
 import matplotlib.pyplot as plt
-from matplotlib.dates import HourLocator, DateFormatter
+import math
+from matplotlib.dates import DateFormatter, HourLocator
 
 from datetime import datetime, timedelta
 from dotenv import load_dotenv
@@ -19,6 +20,21 @@ load_dotenv()
 API_KEY = os.environ["API_KEY"]
 RIPE_API = "https://atlas.ripe.net/api/v2/probes"
 STARLINK_PARAMS = {"status_name": "Connected", "tags": "starlink", "asn": 14593}
+LOCATIONS = {
+    "USA1 (East Coast)": [60510, 63017, 61780, 62417, 62553, 61081],
+    "USA2 (Midwest and West Coast)": [
+        54330,
+        62613,
+        53798,
+        60929,
+        62498,
+        62868,
+        62083,
+        61113,
+    ],
+    "EUROPE": [61878, 62843, 60323, 1002289, 35681, 20544, 50008],
+    "OCEANIA": [19983, 52955],
+}
 
 
 def get_starlink_probe_ids():
@@ -69,35 +85,60 @@ def fetch_ping_results(msm_id):
 
     return probe_rtts_over_time
 
-def create_plots(probe_data):
+
+def create_separate_plots(probe_data):
     # plot the graph for each key in the dictionary
-    for key in probe_data.keys():
-        # get datetime objects and rtt values from the list of tuples
-        x = [t[0] for t in probe_data[key]]
-        y = [t[1] for t in probe_data[key]]
-        
-        # plot the graph
-        plt.plot(x, y, marker='o', label=key)
+    for location, probe_ids in LOCATIONS.items():
+        r, c = (math.ceil(len(probe_ids) / 2), 2)
+        fig, axs = plt.subplots(r, c, constrained_layout=True)
+        axs = axs.flatten()
+        fig.suptitle(location)
+        for i, p in enumerate(probe_ids):
+            # get datetime objects and rtt values from the list of tuples
+            x = [t[0] for t in probe_data[p]]
+            y = [t[1] for t in probe_data[p]]
 
-    # set labels and legend
-    plt.xlabel('UTC Time')
-    plt.ylabel('RTT')
-    plt.title('Probe ID RTT Over Time')
+            # plot the graph
+            axs[i].plot(x, y, marker="o", label=p)
 
-    plt.legend()
-
-    # set the xticks to only show every other label
-    ax = plt.gca()
-    xticks = ax.get_xticks()
-    ax.xaxis.set_major_formatter(DateFormatter('%H:%M:%S'))
-    ax.set_xticks(xticks[::3])
-
+            # set labels and legend
+            axs[i].set_xlabel("UTC Time")
+            axs[i].set_ylabel("RTT")
+            axs[i].set_title("{}".format(p))
+            axs[i].xaxis.set_major_formatter(DateFormatter("%H:%M:%S"))
+            axs[i].xaxis.set_major_locator(HourLocator(interval=4))
     # show the plot
     plt.show()
+
+
+def create_combined_plots(probe_data):
+    # plot the graph for each key in the dictionary
+    for i, (location, probe_ids) in enumerate(LOCATIONS.items()):
+        plt.figure(i + 1)
+        plt.title(location)
+        for i, p in enumerate(probe_ids):
+            # get datetime objects and rtt values from the list of tuples
+            x = [t[0] for t in probe_data[p]]
+            y = [t[1] for t in probe_data[p]]
+
+            # plot the graph
+            plt.plot(x, y, marker="o", label=p)
+
+            # set labels and legend
+            plt.xlabel("UTC Time")
+            plt.ylabel("RTT")
+
+            ax = plt.gca()
+            ax.xaxis.set_major_formatter(DateFormatter("%H:%M:%S"))
+            ax.xaxis.set_major_locator(HourLocator(interval=4))
+            plt.legend()
+    # show the plot
+    plt.show()
+
 
 if __name__ == "__main__":
     # probe_ids = get_starlink_probe_ids()
     # print(probe_ids)
     # print(spawn_pings(probe_ids, "www.google.com"))
-    res = fetch_ping_results(26445013)
-    create_plots(res)
+    res = fetch_ping_results(52575576)
+    create_combined_plots(res)
