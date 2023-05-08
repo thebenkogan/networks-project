@@ -8,7 +8,6 @@ This repository contains the code we used to:
 - Retrieve the results with average RTTs over time for each probe
 - Plot the results for analysis
 
-To run the code, enter:
-`python main.py`
+To run the code, first activate your virtual environment and install the dependencies with `pip install -r requirements.txt`. You can then run the code with `python main.py`.
 
 The code currently retrieves the results from our measurement and saves the plot images to the "graphs/combined" directory. By default, the plots combine all of the results from each probes into one plot for each region, but you can specify the "separate" command-line argument to plot each probe separately. These will be saved to the "graphs/separate" directory. 
