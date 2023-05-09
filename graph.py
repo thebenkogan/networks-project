@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import math
 from matplotlib.dates import DateFormatter, HourLocator
+import os
 
 LOCATIONS = {
     "USA1 (East Coast)": [60510, 63017, 61780, 62417, 62553, 61081],
@@ -17,9 +18,14 @@ LOCATIONS = {
     "EUROPE": [61878, 62843, 60323, 1002289, 35681, 20544, 50008],
     "OCEANIA": [19983, 52955],
 }
+COMBINED_DIR = "graphs/combined"
+SEPARATE_DIR = "graphs/separate"
 
 
 def create_separate_plots(probe_data, show=False, save=True):
+    if save and not os.path.isdir(SEPARATE_DIR):
+        os.makedirs(SEPARATE_DIR)
+
     # plot the graph for each key in the dictionary
     for location, probe_ids in LOCATIONS.items():
         r, c = (math.ceil(len(probe_ids) / 2), 2)
@@ -43,12 +49,15 @@ def create_separate_plots(probe_data, show=False, save=True):
             for tick in axs[j].xaxis.get_major_ticks():
                 tick.label1.set_fontsize(8)
         if save:
-            plt.savefig("graphs/separate/{}.png".format(location), dpi=500)
+            plt.savefig(f"{SEPARATE_DIR}/{location}.png", dpi=500)
     if show:
         plt.show()
 
 
 def create_combined_plots(probe_data, show=False, save=True):
+    if save and not os.path.isdir(COMBINED_DIR):
+        os.makedirs(COMBINED_DIR)
+
     # plot the graph for each key in the dictionary
     for i, (location, probe_ids) in enumerate(LOCATIONS.items()):
         plt.figure(i + 1, figsize=(10, 10))
@@ -70,6 +79,6 @@ def create_combined_plots(probe_data, show=False, save=True):
             ax.xaxis.set_major_locator(HourLocator(interval=4))
             plt.legend()
         if save:
-            plt.savefig("graphs/combined/{}.png".format(location), dpi=500)
+            plt.savefig(f"{COMBINED_DIR}/{location}.png", dpi=500)
     if show:
         plt.show()
